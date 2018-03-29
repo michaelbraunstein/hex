@@ -28,8 +28,7 @@ int main()
 	cin >> choice;
 
 
-	if (choice == 1)
-	{
+	if (choice == 1){
 		int costype; // cosine, arc, hyperbolic;
 		float cosi, result;// arc, hyperbolic, result;
 		cout << "Type 1 if you want to find the cosine, type 2 if you want to find the arc cosine, or 3 if you wnat to find the hyperbolic cosine? \n" << endl;
@@ -56,9 +55,7 @@ int main()
 			result = cosh(cosi);
 			cout << "The hyperbolic cosin of " << cosi << " is " << result << "\n" << endl;
 			system("pause");
-
 		}
-
 	}
 
 	else if (choice == 2)
@@ -86,14 +83,12 @@ int main()
 
 			cout << "The natural logarithm of " << cos << " is " << result << " \n" << endl;
 			system("pause");
-
 		}
 	}
 
-	else if (choice == 3)
-	{
+	else if (choice == 3){
 		int dec, rem;
-		string hrx, decout;
+		string hrx, dekout;
 		int conv;
 		int cs;
 		bool up = false;
@@ -112,7 +107,7 @@ int main()
 			hrx = "";
 			cout << "Enter the decimal number you wish to convert to hexadecimal: \n";
 			cin >> dec;
-			decout = dec;
+			dekout = dec;
 			while (dec > 15)
 			{
 
@@ -137,11 +132,18 @@ int main()
 		}
 		if (up == false) {
 			for (int i = 0; i = (hrx.length(), i++);
-				hrx[i] = tolower(hrx[i]));
-		}
-		cout << "The hexadecimal version of " << decout << " is H0" << hrx << "\n" << endl;
+				hrx[i] = tolower(hrx[i])
+		
+		cout << "The hexadecimal version of " << (dekout) << " is H0" << (hrx) << "\n" << endl;
 
-		system("pause");
+
+
+	
+
+				system("pause");
+		}
+
+		
 
 
 
@@ -150,46 +152,48 @@ int main()
 
 
 
-	else if (conv == 2) {
-		int pow, dec;
-		string myhex = "";
-		pow = 0;
-		dec = 0;
+	 else if 
+	 {(conv == 2) {
+		 int dec, pwr;
+		 string myhex = "";
+		 pwr = 0;
+		 dec = 0;
 
 
-		cout << "Enter the hexadecimal number you wish to convert to decimal: \n" ;
-		cin >> myhex;
+		 cout << "Enter the hexadecimal number you wish to convert to decimal: \n";
+		 cin >> myhex;
 
 
-		for (int i = myhex.length() - 1; i = 0; i--) {
-			if      (myhex[i] == '0') dec += 0 * (1 << (4 * pow));
-			else if (myhex[i] == '1') dec += 1 * (1 << (4 * pow));
-			else if (myhex[i] == '2') dec += 2 * (1 << (4 * pow));
-			else if (myhex[i] == '3') dec += 3 * (1 << (4 * pow));
-			else if (myhex[i] == '4') dec += 4 * (1 << (4 * pow));
-			else if (myhex[i] == '5') dec += 5 * (1 << (4 * pow));
-			else if (myhex[i] == '6') dec += 6 * (1 << (4 * pow));
-			else if (myhex[i] == '7') dec += 7 * (1 << (4 * pow));
-			else if (myhex[i] == '8') dec += 8 * (1 << (4 * pow));
-			else if (myhex[i] == '9') dec += 9 * (1 << (4 * pow));
-			else if (myhex[i] == 'A') dec += 10 * (1 << (4 * pow));
-			else if (myhex[i] == 'B') dec += 11 * (1 << (4 * pow));
-			else if (myhex[i] == 'C') dec += 12 * (1 << (4 * pow));
-			else if (myhex[i] == 'D') dec += 13 * (1 << (4 * pow));
-			else if (myhex[i] == 'E') dec += 14 * (1 << (4 * pow));
-			else if (myhex[i] == 'F') dec += 15 * (1 << (4 * pow));
-			pow++;
-		}
-
-
-
+		 for (int i = myhex.length() - 1; i >= 0; i--) {
+			 if (myhex[i] == '0') dec += 0 * pow(16, pwr);
+			 else if (myhex[i] == '1') dec += 1 * pow(16, pwr);
+			 else if (myhex[i] == '2') dec += 2 * pow(16, pwr);
+			 else if (myhex[i] == '3') dec += 3 * pow(16, pwr);
+			 else if (myhex[i] == '4') dec += 4 * pow(16, pwr);
+			 else if (myhex[i] == '5') dec += 5 * pow(16, pwr);
+			 else if (myhex[i] == '6') dec += 6 * pow(16, pwr);
+			 else if (myhex[i] == '7') dec += 7 * pow(16, pwr);
+			 else if (myhex[i] == '8') dec += 8 * pow(16, pwr);
+			 else if (myhex[i] == '9') dec += 9 * pow(16, pwr);
+			 else if (myhex[i] == 'A') dec += 10 * pow(16, pwr);
+			 else if (myhex[i] == 'B') dec += 11 * pow(16, pwr);
+			 else if (myhex[i] == 'C') dec += 12 * pow(16, pwr);
+			 else if (myhex[i] == 'D') dec += 13 * pow(16, pwr);
+			 else if (myhex[i] == 'E') dec += 14 * pow(16, pwr);
+			 else if (myhex[i] == 'F') dec += 15 * pow(16, pwr);
+			 pwr++;
+		 }
 
 
 
-		cout << "The decimal version of " << (myhex) << " is " << (dec) << "\n" << endl;
-		//system("pause");
 
-	}
+
+
+		 cout << "The decimal version of " << (myhex) << " is " << (dec) << "\n" << endl;
+		 system("pause");
+
+	 }
+	 }
 
 
 
@@ -201,8 +205,9 @@ int main()
 		exit(EXIT_SUCCESS);
 	}
 
-
+	{
 	system("pause");
+}
 }
 
 
