@@ -18,9 +18,7 @@ int conv;
 int  cosine, logarithms, logarithm, convert;
 
 
-int main()
-{
-
+int main() {
 
 	cout << "Type 1 for finding Cosines, type 2 for finding Logarithms,";
 	cout << "type 3 for converting between Decimal and hexadecimal,";
@@ -28,7 +26,7 @@ int main()
 	cin >> choice;
 
 
-	if (choice == 1){
+	if (choice == 1) {
 		int costype; // cosine, arc, hyperbolic;
 		float cosi, result;// arc, hyperbolic, result;
 		cout << "Type 1 if you want to find the cosine, type 2 if you want to find the arc cosine, or 3 if you wnat to find the hyperbolic cosine? \n" << endl;
@@ -86,7 +84,7 @@ int main()
 		}
 	}
 
-	else if (choice == 3){
+	else if (choice == 3) {
 		int dec, rem;
 		string hrx, dekout;
 		int conv;
@@ -108,8 +106,7 @@ int main()
 			cout << "Enter the decimal number you wish to convert to hexadecimal: \n";
 			cin >> dec;
 			dekout = dec;
-			while (dec > 15)
-			{
+			while (dec > 15) {
 
 				rem = dec % 16;
 				dec = dec / 16;
@@ -129,85 +126,61 @@ int main()
 			else if (dec == 13) hrx = "D" + hrx;
 			else if (dec == 14) hrx = "E" + hrx;
 			else if (dec == 15) hrx = "F" + hrx;
+
+			if (up == false) {
+				for (int i = 0; i = hrx.length(); i++)
+					hrx[i] = tolower(hrx[i]);
+			}
+			cout << "The hexadecimal version of " << (dekout) << " is H0" << (hrx) << "\n" << endl;
+
+			system("pause");
 		}
-		if (up == false) {
-			for (int i = 0; i = (hrx.length(), i++);
-				hrx[i] = tolower(hrx[i])
-		
-		cout << "The hexadecimal version of " << (dekout) << " is H0" << (hrx) << "\n" << endl;
+		else if (conv == 2) {
+			double dec;
+			int pwr;
+			string myhex = "";
+			pwr = 0;
+			dec = 0;
+
+			cout << "Enter the hexadecimal number you wish to convert to decimal: \n";
+			cin >> myhex;
 
 
+			for (int i = myhex.length() - 1; i >= 0; i--) {
+				if (myhex[i] == '0') dec += 0 * pow(16, pwr);
+				else if (myhex[i] == '1') dec += 1 * pow(16, pwr);
+				else if (myhex[i] == '2') dec += 2 * pow(16, pwr);
+				else if (myhex[i] == '3') dec += 3 * pow(16, pwr);
+				else if (myhex[i] == '4') dec += 4 * pow(16, pwr);
+				else if (myhex[i] == '5') dec += 5 * pow(16, pwr);
+				else if (myhex[i] == '6') dec += 6 * pow(16, pwr);
+				else if (myhex[i] == '7') dec += 7 * pow(16, pwr);
+				else if (myhex[i] == '8') dec += 8 * pow(16, pwr);
+				else if (myhex[i] == '9') dec += 9 * pow(16, pwr);
+				else if (myhex[i] == 'A') dec += 10 * pow(16, pwr);
+				else if (myhex[i] == 'B') dec += 11 * pow(16, pwr);
+				else if (myhex[i] == 'C') dec += 12 * pow(16, pwr);
+				else if (myhex[i] == 'D') dec += 13 * pow(16, pwr);
+				else if (myhex[i] == 'E') dec += 14 * pow(16, pwr);
+				else if (myhex[i] == 'F') dec += 15 * pow(16, pwr);
+				pwr++;
+			}
 
-	
+			cout << "The decimal version of " << (myhex) << " is " << (dec) << "\n" << endl;
+			system("pause");
 
-				system("pause");
 		}
-
-		
-
-
-
 
 	}
-
-
-
-	 else if 
-	 {(conv == 2) {
-		 int dec, pwr;
-		 string myhex = "";
-		 pwr = 0;
-		 dec = 0;
-
-
-		 cout << "Enter the hexadecimal number you wish to convert to decimal: \n";
-		 cin >> myhex;
-
-
-		 for (int i = myhex.length() - 1; i >= 0; i--) {
-			 if (myhex[i] == '0') dec += 0 * pow(16, pwr);
-			 else if (myhex[i] == '1') dec += 1 * pow(16, pwr);
-			 else if (myhex[i] == '2') dec += 2 * pow(16, pwr);
-			 else if (myhex[i] == '3') dec += 3 * pow(16, pwr);
-			 else if (myhex[i] == '4') dec += 4 * pow(16, pwr);
-			 else if (myhex[i] == '5') dec += 5 * pow(16, pwr);
-			 else if (myhex[i] == '6') dec += 6 * pow(16, pwr);
-			 else if (myhex[i] == '7') dec += 7 * pow(16, pwr);
-			 else if (myhex[i] == '8') dec += 8 * pow(16, pwr);
-			 else if (myhex[i] == '9') dec += 9 * pow(16, pwr);
-			 else if (myhex[i] == 'A') dec += 10 * pow(16, pwr);
-			 else if (myhex[i] == 'B') dec += 11 * pow(16, pwr);
-			 else if (myhex[i] == 'C') dec += 12 * pow(16, pwr);
-			 else if (myhex[i] == 'D') dec += 13 * pow(16, pwr);
-			 else if (myhex[i] == 'E') dec += 14 * pow(16, pwr);
-			 else if (myhex[i] == 'F') dec += 15 * pow(16, pwr);
-			 pwr++;
-		 }
-
-
-
-
-
-
-		 cout << "The decimal version of " << (myhex) << " is " << (dec) << "\n" << endl;
-		 system("pause");
-
-	 }
-	 }
-
-
-
 	else if (choice == 4) {
-		{
-			cout << "Exiting program\n" << endl;
+		cout << "Exiting program\n" << endl;
 
-		}
 		exit(EXIT_SUCCESS);
 	}
 
-	{
-	system("pause");
-}
+
+	//system("pause");
+
 }
 
 
