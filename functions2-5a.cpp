@@ -174,6 +174,7 @@ int main() {
 	}
 	else if (choice == 4) {
 		cout << "Exiting program\n" << endl;
+		system("pause");
 
 		exit(EXIT_SUCCESS);
 	}
